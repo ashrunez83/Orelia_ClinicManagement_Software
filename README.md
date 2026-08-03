@@ -21,7 +21,7 @@ The platform was developed to solve real-world clinical workflow challenges by r
 ![Inventory Mgmt Add Item](docs/docs/screenshots/InvMgmt_addItem.png)
 ![Inventory Stock Alerts](docs/docs/screenshots/Inv_StockAlerts.png)
 
-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
 Key Features
 
 * Patient profile and medical record management
@@ -38,26 +38,26 @@ Technology Stack
 
 Frontend
 
-* Streamlit
+- Streamlit
 
 Backend
 
-🐍 Python
-⚡️ FastAPI
-* REST APIs
-* Business Logic & Data Validation
+- Python
+- FastAPI
+- REST APIs
+- Business Logic & Data Validation
 
 Database
 
-🗄️ PostgreSQL
-☁️ Supabase
+- PostgreSQL
+- Supabase
 
 Deployment
 
-🌐 Render
-☁️ Supabase Cloud Database
-* Git & GitHub
-----------------------------------------------------------
+- Render
+- Supabase Cloud Database
+- Git & GitHub
+--------------------------------------------------------------------------------
 Engineering Highlights
 
 * Designed and implemented a normalized PostgreSQL database supporting patient records, treatments, injections, laboratory data, medication inventory, and payment history.
@@ -66,7 +66,7 @@ Engineering Highlights
 * Collaborated directly with stakeholders to gather requirements and prioritize new features.
 * Monitored production logs, investigated issues, and delivered iterative improvements during live beta deployment.
 * Produced technical documentation and onboarding resources to support software adoption.
------------------------------------------------------------
+--------------------------------------------------------------------------------
 Project Goals
 
 Orelia was designed to provide clinics with a scalable operational platform capable of improving workflow organization, inventory accountability, and operational efficiency while remaining adaptable to different clinic environments and future expansion.
@@ -81,14 +81,14 @@ The project demonstrates practical experience in:
 * Production support and debugging
 * Software engineering best practices
 * Stakeholder collaboration
------------------------------------------------------------
+--------------------------------------------------------------------------------
 Current Status
 
 * Production beta deployment
 * Active workflow testing
 * Ongoing feature development and infrastructure improvements
 * Continuous refinement based on real-world user feedback
------------------------------------------------------------
+--------------------------------------------------------------------------------
 Future Roadmap
 
 * React frontend migration
@@ -98,7 +98,7 @@ Future Roadmap
 * Expanded workflow automation
 * AI-assisted clinical workflow features
 * Mobile-responsive user interface
------------------------------------------------------------
+--------------------------------------------------------------------------------
 Disclaimer
 
 This repository serves as a portfolio case study. Production source code, patient information, authentication credentials, and proprietary clinic data are intentionally excluded. All screenshots and examples use fictional data.
