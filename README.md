@@ -7,19 +7,19 @@ The platform was developed to solve real-world clinical workflow challenges by r
 ## 📸 Application Screenshots
 
 ### Dashboard
-![Dashboard](docs/screenshots/Dashboard.png)
+![Dashboard](docs/docs/screenshots/Dashboard.png)
 
 ### Patient Profile
-![Patient Profile](docs/screenshots/PatientProfile.png)
+![Patient Profile](docs/docs/screenshots/PatientProfile.png)
 
 ### Log Injection and Injection History
-![Log Injection](docs/screenshots/logInjection.png)
+![Log Injection](docs/docs/screenshots/logInjection.png)
 
-![Injection History](docs/screenshots/InjectionHistory.png)
+![Injection History](docs/docs/screenshots/InjectionHistory.png)
 
 ### Inventory Management
-![Inventory Mgmt Add Item](docs/screenshots/InvMgmt_addItem.png)
-![Inventory Stock Alerts](docs/screenshots/Inv_StockAlerts.png)
+![Inventory Mgmt Add Item](docs/docs/screenshots/InvMgmt_addItem.png)
+![Inventory Stock Alerts](docs/docs/screenshots/Inv_StockAlerts.png)
 
 ----------------------------------------------------------------------
 Key Features
