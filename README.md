@@ -21,6 +21,12 @@ The platform was developed to solve real-world clinical workflow challenges by r
 ![Inventory Mgmt Add Item](docs/docs/screenshots/InvMgmt_addItem.png)
 ![Inventory Stock Alerts](docs/docs/screenshots/Inv_StockAlerts.png)
 
+### System Architecture
+
+The diagram below provides a high-level overview of the Orelia platform architecture and demonstrates how the frontend, backend, APIs, and database interact to support clinic workflows.
+
+![Orelia Architecture](docs/architecture/Architectural_Diagram.png)
+
 --------------------------------------------------------------------------------
 Key Features
 
