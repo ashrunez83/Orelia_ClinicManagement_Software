@@ -1,80 +1,92 @@
-# Orelia_ClinicManagement_Software
-
 Orelia Clinic Management Software
 
-Orelia Clinic Management Software is a full-stack operational workflow platform designed to support wellness clinics, injection-based practices, and healthcare providers with patient management, inventory tracking, treatment workflows, and operational visibility.
+Orelia Clinic Management Software is a production healthcare operations platform designed to support wellness clinics, injection-based practices, and healthcare providers through centralized patient management, treatment tracking, medication inventory, laboratory workflows, and operational reporting.
 
-This project was developed to address real-world clinic workflow challenges through scalable software design, audit-friendly inventory tracking, and streamlined operational processes.
+The platform was developed to solve real-world clinical workflow challenges by replacing fragmented manual processes with a secure, scalable application that improves operational efficiency, inventory accountability, and data organization.
 
-Features
+Key Features
 
-* Patient profile management
+* Patient profile and medical record management
 * Treatment and injection tracking
-* Inventory management with automatic deduction workflows
-* Audit-friendly tracking and operational visibility
-* Lab tracking and reminders
-* Payment reminder workflows
-* Dashboard and reporting functionality
-* Modular architecture designed for scalability and future customization
-* Live beta deployment for real-world testing and workflow validation
+* Medication inventory management with automated deduction workflows
+* Audit-friendly inventory history and operational visibility
+* Laboratory tracking and reminder workflows
+* Payment history and reminder management
+* Dashboard reporting and operational insights
+* Modular architecture designed for future customization and scalability
+* Live beta deployment with continuous user feedback and workflow refinement
 
-Tech Stack
+Technology Stack
 
 Frontend
 
 * Streamlit
 
-Backend / Application Logic
+Backend
 
 * Python
-* FastAPI principles and API integration concepts
+* FastAPI
+* REST APIs
+* Business Logic & Data Validation
 
 Database
 
 * PostgreSQL
 * Supabase
 
-Deployment & Infrastructure
+Deployment
 
 * Render
 * Supabase Cloud Database
+* Git & GitHub
 
-Goals of the Project
+Engineering Highlights
 
-The goal of Orelia is to provide clinics with a scalable operational management platform capable of improving workflow organization, inventory accountability, and operational efficiency while remaining adaptable to different clinic environments and future feature expansion.
+* Designed and implemented a normalized PostgreSQL database supporting patient records, treatments, injections, laboratory data, medication inventory, and payment history.
+* Developed RESTful backend APIs for secure data management and workflow automation.
+* Implemented automated inventory deduction workflows to improve medication accountability.
+* Collaborated directly with stakeholders to gather requirements and prioritize new features.
+* Monitored production logs, investigated issues, and delivered iterative improvements during live beta deployment.
+* Produced technical documentation and onboarding resources to support software adoption.
 
-This project also serves as a real-world software engineering and systems design initiative focused on:
+Project Goals
 
-* full-stack development
-* workflow analysis
-* database architecture
-* operational software systems
-* scalable application design
-* real-world deployment and beta testing
+Orelia was designed to provide clinics with a scalable operational platform capable of improving workflow organization, inventory accountability, and operational efficiency while remaining adaptable to different clinic environments and future expansion.
+
+The project demonstrates practical experience in:
+
+* Full-stack software development
+* Backend API development
+* Database architecture and relational modeling
+* Business workflow analysis
+* Cloud deployment
+* Production support and debugging
+* Software engineering best practices
+* Stakeholder collaboration
 
 Current Status
 
-* Live beta deployment
+* Production beta deployment
 * Active workflow testing
-* Ongoing infrastructure refinement and feature expansion
-* Future transition planned toward a React-based frontend architecture for enhanced scalability and user experience
+* Ongoing feature development and infrastructure improvements
+* Continuous refinement based on real-world user feedback
 
 Future Roadmap
 
 * React frontend migration
-* Role-based authentication and permissions
+* Role-based authentication and authorization
 * Enhanced analytics and reporting
-* Expanded clinic workflow customization
 * Multi-provider support
-* Improved automation and notification systems
-* AI-assisted workflow features
+* Expanded workflow automation
+* AI-assisted clinical workflow features
+* Mobile-responsive user interface
 
 Disclaimer
 
-This repository is intended for portfolio and educational purposes. Sensitive patient data, production credentials, and protected healthcare information are not included in this repository.
+This repository serves as a portfolio case study. Production source code, patient information, authentication credentials, and proprietary clinic data are intentionally excluded. All screenshots and examples use fictional data.
 
 Developer
 
 Ashley Molina-Runez
-Founder of Luxovia Systems LLC
-Creator of Orelia Clinic Management Software
+Founder & Software Engineer
+Luxovia Systems LLC
