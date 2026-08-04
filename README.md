@@ -25,7 +25,7 @@ The platform was developed to solve real-world clinical workflow challenges by r
 
 The diagram below provides a high-level overview of the Orelia platform architecture and demonstrates how the frontend, backend, APIs, and database interact to support clinic workflows.
 
-![Orelia Architecture](blob/main/docs/Architectural_Diagram.png)
+![Orelia Architecture](https://github.com/ashrunez83/Orelia_ClinicManagement_Software/blob/main/docs/Architectural_Diagram.png)
 
 --------------------------------------------------------------------------------
 Key Features
