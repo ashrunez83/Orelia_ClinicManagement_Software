@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -7,72 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ashley Rüñez | Computer Science ePortfolio</title>
-</head>
 
-<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <h1>Ashley Rüñez</h1>
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <h2>Computer Science ePortfolio</h2>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
 
-    <p>
-        Welcome to my professional Computer Science ePortfolio.
-        This portfolio showcases my growth, skills, and projects
-        completed throughout the Computer Science program.
-    </p>
+        a {
+            color: inherit;
+        }
 
-    <h3>CS 499 Computer Science Capstone</h3>
+        /* Hero */
 
-    <p>
-        This portfolio includes my original and enhanced artifacts,
-        code review, enhancement narratives, and professional
-        self-assessment developed throughout the CS 499 Computer Science Capstone.
-    </p>
+        .hero {
+            padding: 90px 24px 75px;
+            text-align: center;
+            background:
+                radial-gradient(circle at top, #172554 0%, #0b1120 55%);
+            border-bottom: 1px solid #1e293b;
+        }
 
-    <hr>
+        .hero-content {
+            max-width: 850px;
+            margin: auto;
+        }
 
-    <h2>Category One: Software Engineering and Design</h2>
+        .eyebrow {
+            color: #38bdf8;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
 
-    <h3>Orelia Wellness Clinic Management Software</h3>
+        .hero h1 {
+            font-size: clamp(2.6rem, 6vw, 4.5rem);
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
 
-    <p>
-        Orelia is a full stack clinic management application I independently
-        developed for a local wellness clinic to transition its manual
-        record-keeping processes to a centralized digital system. The application
-        supports patient management, inventory management, injection tracking
-        with automated inventory deductions, payments, laboratory records,
-        treatments, and other clinic operations.
-    </p>
+        .hero h2 {
+            color: #94a3b8;
+            font-size: clamp(1.2rem, 3vw, 1.7rem);
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
 
-    <p>
-        For my Software Engineering and Design enhancement, I refactored the
-        original monolithic FastAPI backend into a modular architecture with
-        dedicated configuration, database, model, router, service, and
-        error-handling components.
-    </p>
+        .hero p {
+            max-width: 680px;
+            margin: auto;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
 
-    <h3>Enhancement Highlights</h3>
+        /* Main layout */
 
-    <ul>
-        <li>Refactored a monolithic backend into a modular software architecture</li>
-        <li>Created dedicated Pydantic models and domain-specific FastAPI routers</li>
-        <li>Introduced service layers for patient, injection, and inventory operations</li>
-        <li>Centralized PostgreSQL database access and application configuration</li>
-        <li>Strengthened input validation for inventory and injection data</li>
-        <li>Implemented centralized exception handling and safer client responses</li>
-        <li>Standardized HTTP status handling for expected application errors</li>
-        <li>Removed development/debugging code and unnecessary configuration exposure</li>
-        <li>Improved maintainability, scalability, testability, and separation of concerns</li>
-    </ul>
+        main {
+            max-width: 1050px;
+            margin: auto;
+            padding: 65px 24px 90px;
+        }
 
-    <h3>Category One Artifact</h3>
+        section {
+            margin-bottom: 70px;
+        }
 
-    <p>
-        <a href="https://github.com/ashrunez83/Orelia_ClinicManagement_Software/tree/main/Artifacts/Category-One">
-            View Enhanced Category One Source Code
-        </a>
-    </p>
+        .section-label {
+            color: #38bdf8;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
 
-</body>
+        h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
 
-</html>
+        h3 {
+            color: #f8fafc;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin-bottom: 18px;
+        }
+
+        /* Capstone introduction */
+
+        .intro {
+            max-width: 800px;
+        }
+
+        /* Artifact card */
+
+        .artifact-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+           
