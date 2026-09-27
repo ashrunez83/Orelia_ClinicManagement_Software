@@ -10,119 +10,320 @@
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
-            background: #0b1120;
-            color: #e5e7eb;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7fa;
+            color: #243447;
             line-height: 1.7;
         }
 
-        a {
-            color: inherit;
-        }
-
-        /* Hero */
-
-        .hero {
-            padding: 90px 24px 75px;
+        header {
+            background-color: #172a3a;
+            color: white;
+            padding: 70px 20px;
             text-align: center;
-            background:
-                radial-gradient(circle at top, #172554 0%, #0b1120 55%);
-            border-bottom: 1px solid #1e293b;
         }
 
-        .hero-content {
-            max-width: 850px;
-            margin: auto;
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
         }
 
-        .eyebrow {
-            color: #38bdf8;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 14px;
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            color: #d5e2ea;
         }
 
-        .hero h1 {
-            font-size: clamp(2.6rem, 6vw, 4.5rem);
-            color: #ffffff;
-            line-height: 1.1;
-            margin-bottom: 12px;
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #dce4ea;
+            padding: 15px 20px;
+            text-align: center;
         }
 
-        .hero h2 {
-            color: #94a3b8;
-            font-size: clamp(1.2rem, 3vw, 1.7rem);
-            font-weight: 500;
-            margin-bottom: 25px;
+        nav a {
+            color: #315b78;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
         }
 
-        .hero p {
-            max-width: 680px;
-            margin: auto;
-            color: #cbd5e1;
-            font-size: 1.05rem;
+        nav a:hover {
+            text-decoration: underline;
         }
-
-        /* Main layout */
 
         main {
-            max-width: 1050px;
-            margin: auto;
-            padding: 65px 24px 90px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
         section {
-            margin-bottom: 70px;
-        }
-
-        .section-label {
-            color: #38bdf8;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            margin-bottom: 8px;
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
         }
 
         h2 {
-            color: #ffffff;
-            font-size: 2rem;
-            margin-bottom: 18px;
+            color: #172a3a;
+            margin-top: 0;
         }
 
         h3 {
-            color: #f8fafc;
-            font-size: 1.25rem;
-            margin-bottom: 12px;
+            color: #315b78;
         }
-
-        p {
-            color: #cbd5e1;
-            margin-bottom: 18px;
-        }
-
-        /* Capstone introduction */
 
         .intro {
-            max-width: 800px;
+            font-size: 1.05rem;
         }
 
-        /* Artifact card */
+        .category-label {
+            display: inline-block;
+            background-color: #e7f0f6;
+            color: #315b78;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-        .artifact-card {
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 16px;
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .artifact-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background-color: #315b78;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .artifact-button:hover {
+            background-color: #24465e;
+        }
+
+        .coming-soon {
+            color: #687985;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #687985;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 50px 20px;
+            }
+
+            header h1 {
+                font-size: 2.1rem;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ashley Rüñez</h1>
+        <p>Computer Science ePortfolio</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#software-engineering">Software Engineering</a>
+        <a href="#algorithms">Algorithms & Data Structures</a>
+        <a href="#databases">Databases</a>
+    </nav>
+
+    <main>
+
+        <section id="about">
+            <h2>CS 499 Computer Science Capstone</h2>
+
+            <p class="intro">
+                Welcome to my professional Computer Science ePortfolio.
+                This portfolio showcases my growth, technical skills, and
+                software development experience throughout the Computer
+                Science program.
+            </p>
+
+            <p>
+                The portfolio includes original and enhanced artifacts,
+                enhancement narratives, my code review, and a professional
+                self-assessment developed throughout the CS 499 Computer
+                Science Capstone.
+            </p>
+        </section>
+
+
+        <section id="software-engineering">
+
+            <span class="category-label">
+                Category One
+            </span>
+
+            <h2>Software Engineering and Design</h2>
+
+            <h3>Orelia Wellness Clinic Management Software</h3>
+
+            <p>
+                Orelia is a full stack clinic management application I
+                independently developed for a local wellness clinic to
+                transition its manual record-keeping processes to a
+                centralized digital system.
+            </p>
+
+            <p>
+                The application supports patient management, inventory
+                management, injection tracking with automated inventory
+                deductions, payments, laboratory records, treatments,
+                and other clinic operations.
+            </p>
+
+            <p>
+                For my Software Engineering and Design enhancement, I
+                refactored the original monolithic FastAPI backend into
+                a modular architecture with dedicated configuration,
+                database, model, router, service, and error-handling
+                components.
+            </p>
+
+            <h3>Enhancement Highlights</h3>
+
+            <ul>
+                <li>
+                    Refactored a monolithic backend into a modular
+                    software architecture
+                </li>
+
+                <li>
+                    Created dedicated Pydantic models and
+                    domain-specific FastAPI routers
+                </li>
+
+                <li>
+                    Introduced service layers for patient, injection,
+                    and inventory operations
+                </li>
+
+                <li>
+                    Centralized PostgreSQL database access and
+                    application configuration
+                </li>
+
+                <li>
+                    Strengthened input validation for inventory and
+                    injection data
+                </li>
+
+                <li>
+                    Implemented centralized exception handling and
+                    safer client responses
+                </li>
+
+                <li>
+                    Standardized HTTP status handling for expected
+                    application errors
+                </li>
+
+                <li>
+                    Removed development/debugging code and unnecessary
+                    configuration exposure
+                </li>
+
+                <li>
+                    Improved maintainability, scalability, testability,
+                    and separation of concerns
+                </li>
+            </ul>
+
+            <h3>Category One Artifact</h3>
+
+            <p>
+                Explore the enhanced source code and modular backend
+                architecture on GitHub.
+            </p>
+
+            <a
+                class="artifact-button"
+                href="https://github.com/ashrunez83/Orelia_ClinicManagement_Software/tree/main/Artifacts/Category-One"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Enhanced Source Code
+            </a>
+
+        </section>
+
+
+        <section id="algorithms">
+
+            <span class="category-label">
+                Category Two
+            </span>
+
+            <h2>Algorithms and Data Structures</h2>
+
+            <p class="coming-soon">
+                Category Two enhancement coming soon.
+            </p>
+
+        </section>
+
+
+        <section id="databases">
+
+            <span class="category-label">
+                Category Three
+            </span>
+
+            <h2>Databases</h2>
+
+            <p class="coming-soon">
+                Category Three enhancement coming soon.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Ashley Rüñez | Computer Science ePortfolio
+        </p>
+    </footer>
+
+</body>
+
+</html>
            
