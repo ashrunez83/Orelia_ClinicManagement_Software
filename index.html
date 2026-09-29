@@ -285,19 +285,60 @@
         </section>
 
 
-        <section id="algorithms">
+<section id="category-two" class="card">
+    <h2>Category Two: Algorithms and Data Structures</h2>
+    <h3>First Expired, First Out (FEFO) Inventory Allocation</h3>
 
-            <span class="category-label">
-                Category Two
-            </span>
+    <p>
+        For the Algorithms and Data Structures enhancement, I improved the
+        inventory management process within the Orelia Clinic Management Software
+        by implementing a First Expired, First Out (FEFO) allocation algorithm.
+        The enhancement automatically prioritizes eligible medication inventory
+        based on expiration date, helping ensure that inventory expiring soonest
+        is used before newer inventory.
+    </p>
 
-            <h2>Algorithms and Data Structures</h2>
+    <p>
+        The algorithm retrieves eligible, non-expired inventory lots in
+        expiration-date order and performs a linear traversal to determine how
+        the required medication quantity should be allocated. When a single lot
+        cannot satisfy the requested amount, the algorithm continues across
+        multiple lots until the required quantity has been fulfilled. A new
+        relational allocation structure also preserves the exact inventory lots
+        and quantities associated with each injection.
+    </p>
 
-            <p class="coming-soon">
-                Category Two enhancement coming soon.
-            </p>
+    <h3>Enhancement Highlights</h3>
 
-        </section>
+    <ul>
+        <li>Implemented FEFO inventory allocation based on medication expiration dates</li>
+        <li>Added expiration-date tracking to inventory records</li>
+        <li>Added linear traversal of ordered inventory lots to fulfill medication requirements</li>
+        <li>Supports allocation across multiple inventory lots</li>
+        <li>Records exact lot-by-lot inventory usage for each injection</li>
+        <li>Added transactional inventory deductions and restoration</li>
+        <li>Updated injection creation, modification, and deletion to support FEFO allocations</li>
+        <li>Preserved backward compatibility with injection records created before the enhancement</li>
+        <li>Added insufficient-inventory handling with 409 Conflict responses</li>
+        <li>Prevents partial inventory deductions when an allocation cannot be fulfilled</li>
+        <li>Improved data integrity and traceability through a one-to-many injection-to-allocation relationship</li>
+    </ul>
+
+    <p>
+        This enhancement demonstrates the use of algorithmic principles to solve
+        a practical inventory-management problem while improving the reliability,
+        traceability, and scalability of the original application.
+    </p>
+
+    <a
+        href="https://github.com/ashrunez83/Orelia_ClinicManagement_Software/tree/main/Artifacts/Category-Two"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button"
+    >
+        View Category Two Source Code
+    </a>
+</section>
 
 
         <section id="databases">
