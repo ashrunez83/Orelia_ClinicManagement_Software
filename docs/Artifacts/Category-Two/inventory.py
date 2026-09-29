@@ -1,6 +1,7 @@
-# CS 499 Enhancement:
-# Strengthens inventory validation by enforcing valid quantity,
-# reorder, volume, and concentration values at the API boundary.
+# CS 499 Category Two Enhancement:
+# Adds expiration-date information required by the FEFO inventory
+# allocation algorithm while preserving compatibility with existing
+# inventory records that do not yet contain an expiration date.
 
 from datetime import date
 from pydantic import BaseModel, Field
