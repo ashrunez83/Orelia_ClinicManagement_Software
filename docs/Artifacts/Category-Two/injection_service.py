@@ -1,6 +1,10 @@
-# CS 499 Enhancement:
-# Separates injection business logic from API routing, including
-# inventory deductions, transaction management, and error handling.
+# CS 499 Category Two Enhancement:
+# Implements First Expired, First Out (FEFO) inventory allocation for
+# injection processing. Eligible inventory lots are prioritized by
+# expiration date and traversed to fulfill the required quantity across
+# one or more lots. Allocation records preserve the exact inventory used,
+# while transactional updates support safe creation, modification,
+# deletion, and inventory restoration.
 
 from fastapi import HTTPException
 from database import get_db_connection, execute_query
