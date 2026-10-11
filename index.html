@@ -157,13 +157,15 @@
         <p>Computer Science ePortfolio</p>
     </header>
 
-    <nav>
+   <nav>
         <a href="#about">About</a>
+        <a href="#self-assessment">Professional Self-Assessment</a>
+        <a href="#code-review">Code Review</a>
         <a href="#software-engineering">Software Engineering</a>
-        <a href="#algorithms">Algorithms & Data Structures</a>
+        <a href="#category-two">Algorithms & Data Structures</a>
         <a href="#databases">Databases</a>
     </nav>
-
+    
     <main>
 
         <section id="about">
@@ -346,26 +348,102 @@
 </section>
 
 
-        <section id="databases">
+<section id="databases">
 
-            <span class="category-label">
-                Category Three
-            </span>
+    <span class="category-label">
+        Category Three
+    </span>
 
-            <h2>Databases</h2>
+    <h2>Databases</h2>
 
-            <p class="coming-soon">
-                Category Three enhancement coming soon.
-            </p>
+    <h3>Database Performance, Integrity, and Scalability</h3>
 
-        </section>
+    <p>
+        For the Databases enhancement, I improved the PostgreSQL database
+        used by the Orelia Clinic Management Software by focusing on query
+        performance, data integrity, and scalability. The enhancements were
+        based on the application's existing database operations and the ways
+        clinic data is retrieved and maintained.
+    </p>
 
+    <p>
+        Targeted database indexes were added to support FEFO inventory
+        queries, chronological injection-history retrieval, and inventory
+        allocation lookups. I also added a database-level constraint to
+        prevent negative inventory quantities and implemented pagination for
+        injection history so the application can retrieve manageable portions
+        of data as the number of records grows.
+    </p>
+
+    <h3>Enhancement Highlights</h3>
+
+    <ul>
+        <li>
+            Added a composite index on medication name and expiration date
+            to support FEFO inventory queries
+        </li>
+
+        <li>
+            Added an index to support chronological injection-history retrieval
+        </li>
+
+        <li>
+            Added an index for efficient injection inventory-allocation lookups
+        </li>
+
+        <li>
+            Added a database-level constraint preventing negative inventory quantities
+        </li>
+
+        <li>
+            Validated the inventory constraint by confirming PostgreSQL rejects
+            invalid negative quantities
+        </li>
+
+        <li>
+            Added LIMIT and OFFSET pagination to injection-history retrieval
+        </li>
+
+        <li>
+            Exposed pagination controls through the FastAPI endpoint
+        </li>
+
+        <li>
+            Improved database performance, integrity, reliability, and scalability
+        </li>
+    </ul>
+
+    <p>
+        This enhancement demonstrates how database design decisions can improve
+        the overall reliability and scalability of an application. Rather than
+        changing the database unnecessarily, the enhancements target actual
+        query patterns and data-integrity requirements within the clinic
+        management system.
+    </p>
+
+    <h3>Category Three Artifact</h3>
+
+    <p>
+        Explore the enhanced database implementation, PostgreSQL enhancements,
+        and supporting application code on GitHub.
+    </p>
+
+    <a
+        class="artifact-button"
+        href="https://github.com/ashrunez83/Orelia_ClinicManagement_Software/tree/main/docs/Artifacts/Category-Three"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        View Enhanced Source Code
+    </a>
+
+</section>
     </main>
 
 
     <footer>
         <p>
-            Ashley Rüñez | Computer Science ePortfolio
+            Ashley Runez | Computer Science ePortfolio
         </p>
     </footer>
 
