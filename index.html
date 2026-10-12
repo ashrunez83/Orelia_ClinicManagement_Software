@@ -79,6 +79,11 @@
             color: #315b78;
         }
 
+        section h4 {
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
+
         .intro {
             font-size: 1.05rem;
         }
@@ -462,6 +467,128 @@
                 View Enhanced Source Code
             </a>
 
+            <h3>Enhancement Narrative</h3>
+
+            <h4>Artifact Description</h4>
+
+            <p>
+                The artifact I selected for this enhancement is an independent full-stack
+                application I designed for a local wellness clinic. The application consists
+                of a database layer, API layer, and frontend interface with a minimalistic
+                UI/UX design created to replace manual record-keeping processes. The clinic
+                needed a digital system for inventory management, patient management,
+                injection logging with automated inventory deductions, and an interactive
+                dashboard with real-time alerts for payments, injections, and laboratory
+                work. I began developing the application in March 2026 and had the MVP ready
+                for beta deployment and testing in May 2026.
+            </p>
+
+            <h4>Justification for Inclusion and Enhancement</h4>
+
+            <p>
+                I selected this artifact for my ePortfolio because it represents one of the
+                most complete applications I have developed independently and demonstrates
+                my ability to apply software engineering concepts to a real-world problem.
+                Unlike a project created specifically for a course assignment, the Wellness
+                Clinic Software was developed in response to the needs of an actual client.
+                This required me to make decisions involving application architecture,
+                database design, API development, user experience, security, and
+                maintainability.
+            </p>
+
+            <p>
+                The application demonstrates my full-stack development abilities through its
+                FastAPI backend, PostgreSQL database, API endpoints, data validation, and
+                frontend interface. It also includes more complex business logic, such as
+                automatically adjusting inventory when an injection is recorded or modified.
+                For this enhancement, I improved the application's architecture by separating
+                responsibilities that were previously concentrated within the main
+                application file into dedicated configuration, database, model, router, and
+                service components.
+            </p>
+
+            <h4>Course Outcome Coverage</h4>
+
+            <p>
+                I met the course outcomes I originally planned to address with this
+                enhancement. The primary outcomes addressed were Course Outcome Four and
+                Course Outcome Five. Course Outcome Four was demonstrated by improving the
+                technical design of an application created for a specific industry and
+                client need. Refactoring the backend into a modular architecture makes the
+                application easier to maintain and expand as additional functionality is
+                introduced. This is particularly important because one of my long-term goals
+                for the software is to make it customizable and scalable enough to
+                potentially support other wellness clinics.
+            </p>
+
+            <p>
+                Course Outcome Five was addressed by applying a stronger security mindset
+                throughout the enhancement. I improved input validation so invalid values
+                can be rejected before reaching application business logic or the database.
+                I also standardized error handling so expected conditions return appropriate
+                HTTP status codes while unexpected server errors are handled centrally
+                without exposing internal database or application information. Additionally,
+                I removed the temporary database debugging endpoint because it exposed
+                configuration information that was useful during development but unnecessary
+                in a completed application.
+            </p>
+
+            <p>
+                Course Outcomes One, Two, and Three were not the primary focus of this
+                enhancement and are demonstrated through other components of the capstone
+                and ePortfolio.
+            </p>
+
+            <h4>Reflection on the Enhancement Process</h4>
+
+            <p>
+                One of the biggest things I learned during this enhancement was the
+                difference between making an application work and designing an application
+                to remain manageable as it grows. When I originally developed the software,
+                my primary focus was implementing the functionality the clinic needed and
+                getting a working MVP ready for testing. As more functionality was added,
+                the main application file continued to grow and eventually contained API
+                routes, database operations, business logic, validation, and error handling
+                in the same file. Although the application worked, revisiting it for this
+                enhancement made it much easier to see how difficult that structure would
+                become to maintain as the software continued to expand.
+            </p>
+
+            <p>
+                The biggest challenge was refactoring a working application without changing
+                or breaking its existing behavior. Instead of rewriting the backend all at
+                once, I separated it incrementally and tested the application after each
+                major change. I first separated configuration and database functionality,
+                followed by the Pydantic models and API routers, and then moved more complex
+                operations into service modules. This process taught me the importance of
+                making smaller, testable changes during refactoring rather than attempting a
+                large restructuring at once.
+            </p>
+
+            <p>
+                I also gained a better understanding of how validation and error handling
+                contribute to both software quality and security. For example, I added
+                validation that prevents an injection dose from being zero or negative and
+                verified that FastAPI rejects the request with a 422 response before it
+                reaches the database. I also changed expected application conditions, such
+                as requesting an injection record that does not exist, to return an
+                appropriate 404 response. Unexpected exceptions are now handled centrally
+                and return a generic response instead of exposing internal error details.
+            </p>
+
+            <p>
+                Feedback on my original enhancement plan specifically supported the proposed
+                architectural refactoring through modularization and separation of concerns
+                and did not identify any required changes. I therefore continued with the
+                planned approach while using incremental testing to validate the refactoring
+                and preserve the application's existing behavior.
+            </p>
+
+            <p>
+                Overall, this enhancement helped me look at the application less as a
+                collection of working features and more as a software system that needs to
+                be maintainable, secure, testable, and capable of continued growth.
+            </p>
         </section>
 
 
@@ -521,6 +648,159 @@
                 target="_blank" rel="noopener noreferrer">
                 View Enhanced Source Code
             </a>
+
+            <h3>Enhancement Narrative</h3>
+
+            <h4>Artifact Description</h4>
+
+            <p>
+                The artifact I selected for my Algorithms and Data Structures enhancement is
+                my Wellness Clinic Management Software, an independently developed
+                full-stack application that I originally began creating in March 2026 for a
+                local wellness clinic. The application was designed to replace manual
+                record-keeping processes with a digital system that manages patients,
+                medications, inventory, injections, payments, laboratory information,
+                treatments, and other clinic operations. An MVP of the application was
+                completed and ready for beta testing in May 2026.
+            </p>
+
+            <p>
+                For this milestone, my main focus was improving the way the application
+                manages medication inventory when injections are recorded. The original
+                implementation required an individual inventory lot to be selected and
+                deducted inventory from that single lot. Although this worked for the
+                initial version of the application, it did not account for expiration dates
+                or situations where the required quantity needed to be fulfilled from
+                multiple inventory lots. I enhanced this functionality by implementing a
+                First Expired, First Out (FEFO) inventory allocation process that prioritizes
+                eligible medication lots according to expiration date.
+            </p>
+
+            <h4>Justification for Inclusion and Enhancement</h4>
+
+            <p>
+                I chose this artifact for my ePortfolio because it demonstrates how
+                algorithms and data structures can be applied to solve a practical problem
+                within a real software application. Medication inventory is well suited for
+                this type of enhancement because simply knowing how much inventory is
+                available is not enough. The application also needs to determine which
+                inventory should be used first and how a requested quantity should be
+                allocated when multiple lots are available.
+            </p>
+
+            <p>
+                The enhanced implementation first retrieves eligible inventory lots that
+                have available quantities, valid expiration dates, and have not expired.
+                PostgreSQL orders these records by expiration date so that the inventory
+                expiring soonest is considered first. The application then performs a linear
+                traversal of the ordered inventory lots, allocating the required quantity
+                from each lot until the medication requirement has been satisfied. If one
+                lot does not contain enough inventory, the algorithm continues to the next
+                eligible lot. This allows a single injection to be fulfilled using multiple
+                inventory lots when necessary.
+            </p>
+
+            <p>
+                I also expanded the underlying data structure supporting the algorithm. I
+                added expiration-date information to inventory records and created a
+                one-to-many relationship between an injection and its inventory allocations.
+                Instead of storing only one lot number with an injection, the application can
+                now preserve the exact inventory lots and quantities used to fulfill it.
+                This improves traceability while allowing the FEFO algorithm to operate
+                across multiple inventory records.
+            </p>
+
+            <p>
+                The enhancement also required changes to the complete injection lifecycle.
+                Injection creation now calculates and records FEFO allocations, while
+                updates restore the previous allocation before recalculating inventory
+                requirements. Deleting an injection restores the exact quantities to the
+                inventory lots from which they were originally deducted. These operations
+                are performed transactionally so that an error does not leave inventory in
+                a partially modified state.
+            </p>
+
+            <p>
+                Testing demonstrated that the algorithm correctly prioritized the
+                earliest-expiring eligible inventory, allocated medication across multiple
+                lots, restored inventory during updates and deletions, and rejected requests
+                when the combined eligible inventory could not satisfy the required
+                quantity. For insufficient inventory, the application returns a 409 Conflict
+                response without performing a partial deduction.
+            </p>
+
+            <h4>Course Outcome Coverage</h4>
+
+            <p>
+                This enhancement met the course outcomes I originally planned to address,
+                particularly the outcome related to designing and evaluating computing
+                solutions using algorithmic principles while considering trade-offs.
+                Implementing FEFO required me to determine how inventory should be filtered,
+                ordered by expiration date, and traversed to allocate the required quantity
+                across one or more lots.
+            </p>
+
+            <p>
+                The enhancement also demonstrates the use of well-founded computing
+                techniques to provide value within a specific industry. FEFO improves
+                medication inventory management by prioritizing inventory that expires
+                sooner while maintaining accurate allocation records and transactional
+                integrity. My original outcome-coverage plan did not change, and this
+                enhancement strengthened the evidence for the outcomes I intended Category
+                Two to address.
+            </p>
+
+            <p>
+                Course Outcomes One, Two, and Five were not the primary focus of this
+                enhancement and are demonstrated through other components of the capstone
+                and ePortfolio.
+            </p>
+
+            <h4>Reflection on the Enhancement Process</h4>
+
+            <p>
+                One of the biggest things I learned from this enhancement is that
+                implementing an algorithm in an existing application involves more than
+                writing the algorithm itself. FEFO initially seemed straightforward by
+                prioritizing inventory by expiration date and then using the earliest
+                expiring inventory first. However, integrating it into the application
+                required me to consider how the algorithm would affect inventory records,
+                injection history, updates, deletions, and existing data.
+            </p>
+
+            <p>
+                One of the main challenges was moving from the original design, where an
+                injection was associated with a single inventory lot, to supporting
+                allocations across multiple lots. Creating a separate allocation structure
+                allowed the application to preserve exactly which lots and quantities were
+                used. I also had to ensure that updating or deleting an injection correctly
+                restored those allocations. This gave me a better understanding of how
+                algorithms, data structures, and database relationships work together within
+                a larger application.
+            </p>
+
+            <p>
+                Testing was also an important part of the learning process. I created
+                controlled inventory lots with different expiration dates and quantities and
+                tested multi-lot allocation, updates, deletions, and insufficient inventory.
+                These tests helped me identify integration issues and verify that
+                transactions prevented partial database changes when an operation failed.
+            </p>
+
+            <p>
+                Feedback on my original enhancement plan supported the use of FEFO as a
+                practical inventory-allocation strategy and recognized how the algorithm
+                could support operational decision-making. No changes to the planned
+                enhancement were required, so I continued with the proposed FEFO approach
+                while refining its integration through testing.
+            </p>
+
+            <p>
+                Overall, this enhancement strengthened my understanding of algorithmic
+                problem-solving and showed me the importance of considering how an algorithm
+                affects the entire application rather than viewing it as an isolated piece
+                of code.
+            </p>
         </section>
 
 
@@ -609,6 +889,98 @@
                 target="_blank" rel="noopener noreferrer">
                 View Enhanced Source Code
             </a>
+
+            <h3>Enhancement Narrative</h3>
+
+            <h4>Artifact Description</h4>
+
+            <p>
+                The artifact I chose for this enhancement is the database component of my
+                Wellness Clinic Software, which I originally began developing in March 2026
+                for a local wellness clinic. The application uses PostgreSQL with a FastAPI
+                backend to manage patient information, medication inventory, injection
+                history, payments, labs, and other clinic records. I chose this artifact
+                because the database is a major part of how the application functions, and
+                I wanted to improve its performance, scalability, and data integrity as the
+                application continues to grow.
+            </p>
+
+            <h4>Justification for Inclusion and Enhancement</h4>
+
+            <p>
+                This artifact demonstrates my ability to improve an existing database based
+                on how the application actually uses its data. I added targeted indexes to
+                support FEFO inventory queries, injection-history retrieval, and
+                inventory-allocation lookups. I also added a database constraint that
+                prevents inventory quantities from becoming negative and tested it by
+                intentionally attempting an invalid update, which PostgreSQL successfully
+                rejected.
+            </p>
+
+            <p>
+                Finally, I added pagination to injection history using LIMIT and OFFSET so
+                the application does not need to retrieve every record as the database
+                grows. These enhancements made the database more efficient, reliable, and
+                scalable without unnecessarily changing the existing application design.
+            </p>
+
+            <h4>Course Outcome Coverage</h4>
+
+            <p>
+                This enhancement meets the course outcomes I originally planned to address,
+                specifically the outcome related to using well-founded computing techniques
+                to create solutions that provide industry-specific value. The database
+                improvements directly support the needs of a clinic by improving the
+                reliability and efficiency of inventory and injection records.
+            </p>
+
+            <p>
+                The enhancement also supports the security outcome through database
+                constraints, transactional operations, and parameterized queries that help
+                protect the integrity and security of the data. My original outcome-coverage
+                plan did not require changes.
+            </p>
+
+            <p>
+                Course Outcomes One, Two, and Three were not the primary focus of this
+                enhancement and are demonstrated through other components of the capstone
+                and ePortfolio.
+            </p>
+
+            <h4>Reflection on the Enhancement Process</h4>
+
+            <p>
+                One of the most notable things I learned from this enhancement is that
+                improving a database does not always require making major changes. Smaller
+                improvements can make a meaningful difference when they are based on how the
+                application interacts with the data. Prior to adding the indexes, I reviewed
+                the existing indexes and queries used by the application to ensure the
+                target areas would truly benefit from these changes.
+            </p>
+
+            <p>
+                Adding pagination helped me gain a better understanding of scalability
+                because retrieving every record may work when an application is small but
+                can quickly become inefficient as more data is added. Testing the database
+                constraint was especially useful because it showed me the value of enforcing
+                important rules at the database level instead of relying only on application
+                validation.
+            </p>
+
+            <p>
+                The original enhancement-plan feedback supported the database direction and
+                specifically recognized its focus on relational integrity, reporting,
+                auditability, and long-term scalability. No required changes were identified.
+                As I implemented the enhancement, I evaluated the application's actual
+                database operations and focused the final implementation on targeted indexes,
+                data-integrity constraints, transactional operations, and pagination.
+            </p>
+
+            <p>
+                Overall, this enhancement gave me a better understanding of how indexing,
+                constraints, transactions, and pagination work together to make an
+                application more reliable and scalable.
+            </p>
 
         </section>
     </main>
